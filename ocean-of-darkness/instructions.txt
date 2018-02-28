@@ -3,7 +3,8 @@ for /r/unixporn
 
 ## INSTRUCTIONS: Review every file and edit according to your system and/or
 preferences. Most things here are specific to my system although I changed
-some things to be more standard for the userbase.
+some things to be more standard for the userbase. Then copy everything to your
+home directory.
 
 ## MY OWN SYSTEM SETUP (was used as a baseline for this config)
 OS: Gentoo Linux x64
