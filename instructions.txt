@@ -1,0 +1,29 @@
+"ocean of darkness" by benyi
+for /r/unixporn
+
+## INSTRUCTIONS: Review every file and edit according to your system and/or
+preferences. Most things here are specific to my system although I changed
+some things to be more standard for the userbase.
+
+## MY OWN SYSTEM SETUP (was used as a baseline for this config)
+OS: Gentoo Linux x64
+Terminal: st
+Editor: Vim
+Networking: enp2s0, wlp3s0
+Music system: mpd + ncmpcpp
+Sound system: ALSA
+Init system: OpenRC
+
+Look the following files:
+.zshrc
+.xinitrc
+.config/i3/config
+.config/polybar/config
+.config/redshift.conf
+.config/mpd/mpd.conf
+.config/ncmpcpp/config
+.config/neofetch/config
+.config/vis/config
+
+## DON'T FORGET TO MAKE THE CONFIG FIT YOUR SETUP OR YOUR X SERVER MIGHT NOT BE
+USABLE!!
