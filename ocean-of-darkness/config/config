@@ -1,0 +1,16 @@
+visualizer.fps=60
+audio.stereo.enabled=false
+visualizer.rotation.secs=0
+visualizers=spectrum
+visualizer.spectrum.bar.width=2
+Defaults to 1. It's possible to set this to
+visualizer.spectrum.smoothing.mode=monstercat
+visualizer.spectrum.falloff.mode=fill
+visualizer.spectrum.falloff.weight=0.95
+visualizer.spectrum.top.margin=0
+visualizer.spectrum.bottom.margin=0.0
+visualizer.spectrum.right.margin=0.0
+visualizer.spectrum.left.margin=0.01
+visualizer.spectrum.reversed=false
+audio.sources=mpd
+colors.scheme=onecolor
