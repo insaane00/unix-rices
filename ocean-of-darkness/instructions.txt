@@ -8,10 +8,15 @@ some things to be more standard for the userbase.
 ## MY OWN SYSTEM SETUP (was used as a baseline for this config)
 OS: Gentoo Linux x64
 Terminal: st
+Window manager: i3 (vanilla)
 Editor: Vim
 Networking: enp2s0, wlp3s0
 Music system: mpd + ncmpcpp
 Sound system: ALSA
+Other programs: ranger, cli-visualizer
+Fonts: lucy tewi for text, wuncon siji for icons. Get them here:
+  https://github.com/lucy/tewi-font
+  https://github.com/stark/siji
 Init system: OpenRC
 
 Look the following files:
