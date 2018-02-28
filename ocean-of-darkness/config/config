@@ -1,0 +1,26 @@
+print_info() {
+	info title
+	info underline
+	info "OS" distro
+	info "Kernel" kernel
+	info "CPU" cpu
+	info "Memory" memory
+	info "GPU" gpu
+	info "GPU Driver" gpu_driver
+	info "Machine Model" model
+	prin "BIOS Version" "$(cat /sys/class/dmi/id/bios_version)"
+	info "Locale" locale
+	info "Resolution" resolution
+	info "Window Manager" wm
+	info "Shell" shell
+	info "Terminal" term
+	info "Terminal Font" term_font
+	info "Uptime" uptime
+
+
+	info cols
+}
+distro_shorthand="on"
+kernel_shorthand="off"
+refresh_rate="on"
+block_range=(0 15)
