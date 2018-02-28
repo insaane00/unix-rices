@@ -1,0 +1,231 @@
+[bar/sysbar]
+
+width = 100%
+height = 13
+
+font-0 = "lucy tewi:pixelsize=9;2"
+font-1 = "Wuncon Siji:pixelsize=9;2"
+background = ${xrdb:*.background}
+foreground = ${xrdb:*.foreground}
+
+tray-position = right
+tray-maxsize = 9
+
+modules-left = i3 RightArrow1 xwindow
+modules-center = 
+modules-right = keyboard LeftArrow3 battery LeftArrow4 wireless-network separator wired-network LeftArrow1 calendar clock LeftArrow2
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/LeftArrow1]
+type = custom/text
+content = ""
+content-foreground = ${xrdb:*.color3}
+content-background = ${xrdb:*.background}
+
+[module/LeftArrow2]
+type = custom/text
+content = ""
+content-foreground = ${xrdb:*.background}
+content-background = ${xrdb:*.color3}
+
+[module/LeftArrow3]
+type = custom/text
+content = ""
+content-foreground = ${xrdb:*.color4}
+content-background = ${xrdb:*.background}
+
+[module/LeftArrow4]
+type = custom/text
+content = ""
+content-foreground = ${xrdb:*.background}
+content-background = ${xrdb:*.color4}
+
+[module/RightArrow1]
+type = custom/text
+content = ""
+content-foreground = ${xrdb:*.color4}
+content-background = ${xrdb:*.background}
+
+[module/separator]
+type = custom/text
+content = "|"
+content-foreground = ${xrdb:*.foreground}
+content-background = ${xrdb:*.background}
+
+
+[module/xwindow]
+type = internal/xwindow
+
+label = %title%
+label-maxlen = 36
+
+format-foreground = ${xrdb:*.foreground}
+format-background = ${xrdb:*.background}
+format-prefix = "  "
+
+[module/keyboard]
+type = internal/xkeyboard
+
+format =  <label-layout>  
+format-foreground = ${xrdb:*.foreground}
+format-background = ${xrdb:*.background}
+format-prefix = " "
+format-suffix = " "
+
+[module/clock]
+type = internal/date
+
+interval = 1.0
+
+time = %H:%M:%S
+
+format =   <label> 
+format-prefix = " "
+format-suffix = " "
+format-foreground = ${xrdb:*.background}
+format-background = ${xrdb:*.color3}
+
+label = %time%
+
+[module/calendar]
+type = internal/date
+
+interval = 1.0
+
+date = %d/%m/%Y
+
+format =  <label>
+format-prefix = " "
+format-foreground = ${xrdb:*.background}
+format-background = ${xrdb:*.color3}
+label = %date%
+
+[module/battery]
+type = internal/battery
+
+full-at = 98
+
+battery = BAT1
+adapter = AC0
+
+poll-interval = 5
+
+time-format = %H:%M
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = 
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-charging-background = ${xrdb:*.color4}
+format-discharging-background = ${xrdb:*.color4}
+format-full-background = ${xrdb:*.color4}
+
+format-discharging-foreground = ${xrdb:*.background}
+format-charging-foreground = ${xrdb:*.background}
+format-full-foreground = ${xrdb:*.color2}
+
+format-charging-prefix = "[]"
+format-discharging-prefix = " "
+format-full-prefix = " "
+
+ramp-capacity-0 =  
+ramp-capacity-1 =  
+ramp-capacity-2 =  
+ramp-capacity-3 =  
+ramp-capacity-4 =  
+
+
+animation-charging-0 =  
+animation-charging-1 =   
+animation-charging-2 =  
+animation-charging-3 =  
+animation-charging-4 =  
+animation-charging-framerate = 750
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+
+format-prefix = "  "
+format-suffix = "  "
+
+index-sort = true
+wrapping-scroll = true
+ws-icon-0 = "1: trm;"
+ws-icon-1 = "2: www;"
+ws-icon-2 = "3: mus;♪"
+ws-icon-3 = "4: gme;"
+ws-icon-4 = "5: dev;"
+ws-icon-5 = "6: art;"
+ws-icon-6 = "7: wrk;"
+ws-icon-7 = "8: mov;"
+ws-icon-8 = "9: xat;"
+ws-icon-9 = "10: etc;?"
+
+strip-wsnumbers = true
+
+label-unfocused-background = ${xrdb:*.color4}
+label-unfocused-foreground = ${xrdb:*.background}
+
+format-suffix-background = ${xrdb:*.color4}
+format-prefix-background = ${xrdb:*.color4}
+
+label-focused = %index%: %icon% %name%
+label-focused-foreground = ${xrdb:*.color4}
+label-focused-background = ${xrdb:*.background}
+label-focused-padding = 1
+
+label-unfocused = %index%: %icon% %name%
+label-unfocused-padding = 1
+
+label-urgent = %index%: %icon% %name%
+label-urgent-foreground = ${xrdb:*.background}
+label-urgent-background = ${xrdb:*.color1}
+label-urgent-padding = 1
+
+label-visible = %index%: %icon% %name%
+label-visible-padding = 1
+
+#format-suffix = " "
+
+[module/wireless-network]
+type = internal/network
+interface = wlp3s0
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-prefix = " "
+format-disconnected-prefix = " "
+format-connected-suffix = " "
+format-disconnected-suffix = " "
+
+label-connected =  %essid%
+label-connected-foreground = ${xrdb:*.foreground}
+label-connected-background = ${xrdb:*.background}
+
+label-disconnected =  offline
+label-disconnected-foreground = ${xrdb:*.color1}
+label-disconnected-background = ${xrdb:*.background}
+
+[module/wired-network]
+type = internal/network
+interface = enp2s0
+
+format-connected-prefix = " "
+format-disconnected-prefix = " "
+format-connected-suffix = " "
+format-disconnected-suffix = " "
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =  online
+label-connected-foreground = ${xrdb:*.foreground}
+label-connected-background = ${xrdb:*.background}
+
+label-disconnected =  offline
+label-disconnected-foreground = ${xrdb:*.color1}
+label-disconnected-background = ${xrdb:*.background}
+; vim:ft=dosini
